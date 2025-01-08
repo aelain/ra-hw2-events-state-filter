@@ -11,11 +11,16 @@ export default class Toolbar extends React.Component {
 
     return (
       <div>
-        {filters.map((filter, index) => (
-          <button className={filter === selected ? "btn btn_selected" : "btn"} onClick={onSelectFilter} key={index}>
-            {filter}
-          </button>
-        ))}
+        {filters.map((filter, index) => {
+          return (
+            <button
+              className={filter === selected ? "btn btn_selected" : "btn"}
+              onClick={onSelectFilter}
+              key={index}>
+              {filter}
+            </button>
+          );
+        })}
       </div>
     );
   }

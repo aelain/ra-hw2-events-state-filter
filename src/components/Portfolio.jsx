@@ -3,6 +3,11 @@ import Toolbar from './Toolbar';
 import ProjectList from './ProjectList';
 
 export default class Portfolio extends React.Component {
+  constructor() {
+    super();
+    this.onSelectFilter = this.onSelectFilter.bind(this);
+  }
+
   filters = ['All', 'Websites', 'Flayers', 'Business Cards'];
 
   projectsAll = [

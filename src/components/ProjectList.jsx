@@ -11,9 +11,11 @@ export default class ProjectList extends React.Component {
 
     return (
       <div className="card_flexbox">
-        {projects.map((item, index) => (
-          <img src={item.img} className="img_flexbox" key={index} />
-        ))}
+        {projects.map((item, index) => {
+          return (
+            <img src={item.img} className="img_flexbox" key={index} />
+          );
+        })}
       </div>
     );
   }
